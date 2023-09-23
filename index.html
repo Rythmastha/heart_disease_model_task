@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>ML Deployment using Heroku</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="Prediciton">
+        <h1>Heart Disease Prediction</h1>
+        <form action="{{ url_for('predict')}}"method="post">
+        <label for="BMI">BMI</label>
+		<input type="text" id="BMI" name="BMI" required="required">
+		<br>
+        <label for="Smoking">Smoking</label>
+    	<select id="Smoking" name="Smoking" required="required">
+      		<option value="0">Yes</option>
+      		<option value="1">No</option>
+        </select>
+    	<br>
+        
+		<label for="AlcoholDrinking">AlcoholDrinking</label>
+        <select id="AlcoholDrinking" name="AlcoholDrinking" required="required">
+              <option value="0">Yes</option>
+              <option value="1">No</option>
+        </select>
+    	<br>
+        <label for="Stroke">Stroke</label>
+    	<select id="Stroke" name="Stroke" required="required">
+      		<option value="0">Yes</option>
+      		<option value="1">No</option>
+        </select>
+    	<br>
+        <label for="PhysicalHealth">PhysicalHealth </label>
+    	<input type="text" id="PhysicalHealth" name="PhysicalHealth" required="required">btw:[0-30]
+    	<br>
+        <label for="MentalHealth">MentalHealth </label>
+    	<input type="text" id="MentalHealth" name="MentalHealth" required="required">btw:[0-30]
+    	<br>
+        <label for="DiffWalking">DiffWalking</label>
+    	<select id="DiffWalking" name="DiffWalking" required="required">
+      		<option value="0">Yes</option>
+      		<option value="1">No</option>
+        </select>
+    	<br>
+        <label for="Sex">Sex</label>
+    	<select id="Sex" name="Sex" required="required">
+      		<option value="0">Female</option>
+      		<option value="1">Male</option>
+        </select>
+    	<br>
+        <label for="AgeCategory">AgeCategory</label>
+    	<select id="AgeCategory" name="AgeCategory" required="required">
+      		<option value="0">18-24</option>
+      		<option value="1">25-29</option>
+            <option value="2">30-34</option>
+            <option value="3">35-39</option>
+      		<option value="4">40-44</option>
+            <option value="5">45-49</option>
+            <option value="6">50-54</option>
+      		<option value="7">55-59</option>
+            <option value="8">60-64</option>
+            <option value="9">65-69</option>
+      		<option value="10">70-74</option>
+            <option value="11">75-79</option>
+            <option value="12">80 or older</option>
+        </select>
+    	<br>   
+        <label for="Race">Race</label>
+    	<select id="Race" name="Race" required="required">
+      		<option value="0">American Indian/Alaskan Native</option>
+      		<option value="1">Asian</option>
+            <option value="2">Black</option>
+            <option value="3">Hispanic</option>
+      		<option value="4">Other</option>
+            <option value="5">White</option>
+        </select>
+    	<br>   
+        <label for="Diabetic">Diabetic</label>
+    	<select id="Diabetic" name="Diabetic" required="required">
+      		<option value="0">No</option>
+      		<option value="1">No, borderline diabetes</option>
+            <option value="2">Yes</option>
+            <option value="3">Yes (during pregnancy)</option>
+        </select>
+    	<br>   
+        <label for="PhysicalActivity">PhysicalActivity</label>
+        <select id="PhysicalActivity" name="PhysicalActivity" required="required">
+            <option value="0">Yes</option>
+            <option value="1">No</option>
+        </select>
+    	<br>
+        <label for="GenHealth">GenHealth</label>
+        <select id="GenHealth" name="GenHealth" required="required">
+            <option value="0">Excellent</option>
+            <option value="1">Fair</option>
+            <option value="2">Good</option>
+            <option value="3">Poor</option>
+            <option value="4">Very good</option>
+        </select>
+        <br> 
+        <label for="SleepTime">SleepTime </label>
+    	<input type="text" id="SleepTime" name="SleepTime" required="required">btw:[1-23]
+    	<br> 
+
+        <label for="Asthma">Asthma</label>
+        <select id="Asthma" name="Asthma" required="required">
+            <option value="0">Yes</option>
+            <option value="1">No</option>
+        </select>
+    	<br> 
+        <label for="KidneyDisease">KidneyDisease</label>
+        <select id="KidneyDisease" name="KidneyDisease" required="required">
+            <option value="0">Yes</option>
+            <option value="1">No</option>
+        </select>
+    	<br>
+        <label for="SkinCancer">SkinCancer</label>
+        <select id="SkinCancer" name="SkinCancer" required="required">
+            <option value="0">Yes</option>
+            <option value="1">No</option>
+        </select>
+    	<br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+
+       <br>
+       <b>{{ Prediction_text }}</b>
+    </div>
+</body>
+</html>
+
+
+
+
+        
+
+
+
+
+        
+
+
+        
+
+
+
